@@ -1,0 +1,126 @@
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cream);
+}
+
+.card{
+    background-color: var(--white);
+    margin: 2.5rem;
+    border-radius: 1rem;
+}
+
+#photo{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.bottomCard{
+    margin: 1rem 1.5rem;
+}
+
+span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--veryDarkBlue);
+    letter-spacing: 0.3rem;
+}
+
+#title{
+    font-family: 'Fraunces', serif;
+    margin: 0.7rem 0;
+}
+
+#paragraph{
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--darkGrayishBlue);
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.price{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+#newPrice{
+    color: var(--darkCyan);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#oldPrice{
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;
+    align-self: center;
+}
+
+button{
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    background-color: var(--darkCyan);
+    border-radius: 0.5rem;
+    border-width: thin;
+    color: var(--white);
+    font-weight: bold;
+    transition: .3s;
+}
+
+#cartIcon{
+    margin: 0 0.5rem;
+}
+
+button:hover{
+    background-color: hsl(158, 36%, 25%);
+}
+
+footer{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+footer > a{
+    text-decoration: none;
+}
+
+@media screen and (min-width:960px){
+   .card{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 8rem;
+   }
+
+   #photo{
+    background-image: url(../images/image-product-desktop.jpg); 
+    border-end-start-radius: 1rem;
+    border-top-right-radius: 0;
+    height: 100%;
+   }
+
+   footer{
+    position: relative;
+    top: 12rem;
+   }
+}
+
+
